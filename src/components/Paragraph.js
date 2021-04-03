@@ -19,9 +19,9 @@ function Paragraph(props) {
                     <div className="paragraphContainer">
                         {props.children}
                     </div>
-                    <div className="resumeContainer">
+                    {/* <div className="resumeContainer">
                         <Button className="resumeBtn" type="button" onClick={event =>  window.location.href='/resume'}>RESUME</Button>
-                    </div>
+                    </div> */}
                     
                 </div>
             </div>

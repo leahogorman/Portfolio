@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link } from 'react-router-dom';
 import Paragraph from '../components/Paragraph'
 
 function AboutPage(props) {
@@ -11,10 +11,10 @@ function AboutPage(props) {
                     I'm a Web Developer with a background in Art and Design. (You can see my art website <a className='disabled' href="#" >here</a>)
                 </p>
                 <p>
-                    I have a BFA in Sculpture from Tyler School of Art and a Certificate in Full Stack Development from University of Toronto.
+                    I have a BFA in Sculpture with a second major in Theatre from Tyler School of Art and a Certificate in Full Stack Development from University of Toronto.
                 </p>
                 <p>
-                    To learn more please check out my resume below.
+                    To learn more check out my <Link to='/resume' >resume</Link>
                 </p>
             </Paragraph>
             <style jsx>{`
