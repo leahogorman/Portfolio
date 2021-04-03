@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link } from 'react-router-dom';
+import {HashRouter as Router, Route, Link } from 'react-router-dom';
 import'react-bootstrap'
 import './App.css';
 import { Container, Navbar, Nav } from "react-bootstrap";
@@ -17,7 +17,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       headerLinks: [
-        {title: 'Home', path: '/portfolio'},
+        {title: 'Home', path: '/'},
         {title: 'About', path: '/about'},
         {title: 'Portfolio', path: '/pastwork'},
         {title: 'Contact', path: '/contact'},
@@ -41,9 +41,10 @@ class App extends React.Component {
 
   render(){
     return [
+      <Router>
       <Container className="p-0" fluid={true}>
         <Navbar className="border-bottom justify-content-end" gb="transparent" expand="lg">
-          <Navbar.Brand><Link className="nav-link brand" to="/portfolio">Leah O'Gorman</Link></Navbar.Brand>
+          <Navbar.Brand><Link className="nav-link brand" to="/">Leah O'Gorman</Link></Navbar.Brand>
           <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
           <Navbar.Collapse id="navbar-toggle">
             <Nav className="ml-auto">
@@ -55,13 +56,14 @@ class App extends React.Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Route path="/portfolio" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>}/>
+        <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>}/>
         <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} text={this.state.about.text}/>}/>
         <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title} />}/>
         <Route path="/resume" exact render={() => <ResumePage />}/>
         <Route path="/pastwork" exact render={() => <PortfolioPage title={this.state.portfolio.title} subtitle={this.state.portfolio.subtitle} text={this.state.portfolio.text}/>}/>
         <Footer />
       </Container>
+      </Router>
     ]
   }
 }

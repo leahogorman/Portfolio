@@ -20,7 +20,7 @@ function Paragraph(props) {
                         {props.children}
                     </div>
                     <div className="resumeContainer">
-                        <Button className="resumeBtn" type="button" onClick={event =>  window.location.href='/portfolio/resume'}>RESUME</Button>
+                        <Button className="resumeBtn" type="button" onClick={event =>  window.location.href='/resume'}>RESUME</Button>
                     </div>
                     
                 </div>
