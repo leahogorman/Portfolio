@@ -19,9 +19,6 @@ function Paragraph(props) {
                     <div className="paragraphContainer">
                         {props.children}
                     </div>
-                    {/* <div className="resumeContainer">
-                        <Button className="resumeBtn" type="button" onClick={event =>  window.location.href='/resume'}>RESUME</Button>
-                    </div> */}
                     
                 </div>
             </div>
@@ -36,7 +33,6 @@ function Paragraph(props) {
                     margin-left: 5vw;
                     background-color: rgba(0, 0, 0, .5);
                     box-shadow: 1px 1px 20px 20px  rgba(120, 120, 120, .5);
-                    border-radius: 50px;
                 }
                 .aboutImage {
                     border-radius: 50%;
@@ -52,8 +48,10 @@ function Paragraph(props) {
                     grid-column: 1;
                 }
                 .infoContainer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     width: 60vw;
-                    border-radius: 0 50px 50px 0;
                     grid-column: 2;
                     padding: 4rem;
                 }
@@ -61,7 +59,6 @@ function Paragraph(props) {
                     font-weight: bold;
                     background-color: white;
                     height: fit-content;
-                    border-radius: 50px;
                     padding: 3rem;
                 }
                 .title {
@@ -91,7 +88,7 @@ function Paragraph(props) {
                     padding: 1rem;
                     text-decoration: none;
                     font-weight: bold;
-                    color: white;
+                    color: black;
                     border-radius: 10px;
                     margin-top: 1rem;
                     border: #757575;
@@ -112,9 +109,10 @@ function Paragraph(props) {
                         grid-template-column: 1fr;
                         grid-template-row: 1fr, 1fr;
                         background-color: transparent;
+                        box-shadow: none;
                     }
                     .aboutImage {
-                        width: 30vw;
+                        width: 80vw;
                     }
                     .imageContainer {
                         background-color: transparent;
@@ -136,8 +134,9 @@ function Paragraph(props) {
                         padding-bottom: 3rem;
                     }
                     .textContainer {
-                        background-color: black;
-                        color: white;
+                        background-color: white;
+                        color: black;
+                        border-radius: 0;
                     }
                   }
             `}</style>

@@ -21,6 +21,11 @@ function Title(props) {
                 .title {
                     font-size: 7rem;
                 }
+                @media screen and (max-width: 1000px) {
+                    .title {
+                        font-size: 4.5rem;
+                    }
+                }
             `}</style>
         </div>
 

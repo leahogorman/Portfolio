@@ -35,6 +35,15 @@ function Card(props) {
                 .cardContainer:hover .hidden {
                     visibility: visible;
                 }
+                @media screen and (max-width: 1000px) {
+                    .cardContainer {
+                        width: 300px;
+                        height: auto;
+                    }
+                    .cardImage {
+                        width: 300px;
+                    }
+                }
             `}</style>
         </div>
     )

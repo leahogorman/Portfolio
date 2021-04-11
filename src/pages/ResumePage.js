@@ -8,11 +8,8 @@ function ResumePage() {
         <div id="resume">
             <Resume />
             <style jsx>{`
-                .resume {
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 75vw;
-                }
+            @media screen and (min-width: 600px) {
+            }
             `}</style>
         </div>
     );
